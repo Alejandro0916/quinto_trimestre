@@ -126,9 +126,43 @@ while ($numero <= 100){
 }
 echo $i;
 //quinta act
-$contraseña = readline("ingresar contraseña;");
-while ($contraseña != "alejo123"){
-    $contraseña = readline("ingresar contraseña;");
+$contra = readline("Ingrese la contraseña: ");
+while ($contra != "papialejo"){
+    $contra = readline("Ingrese la contraseña: ");
 }
-echo"contraseña correcta"
+echo "contraseña correcta";
+//--6. Arreglos (listas) --//
+//primera act
+$nombres = array("Ana", "Carlos", "María", "Luis", "Sofía");
+foreach ($nombres as $nombre) {
+    echo $nombres[0] . "<br>";
+    echo $nombres[1] . "<br>";
+    echo $nombres[2] . "<br>";
+    echo $nombres[3] . "<br>";
+    echo $nombres[4] . "<br>";
+}
+//segunda act
+$frutas = array("Manzana", "Banano", "Uva", "Mango", "Pera");
+foreach ($frutas as $fruta) {
+    echo $fruta . "<br>";
+}
+//tercera act
+$frutas = array("Manzana", "Banano", "Uva", "Mango");
+if (in_array("Uva", $frutas)) {
+    echo "La fruta existe en el arreglo";
+} else {
+    echo "La fruta no existe";
+}
+//cuarta act
+$numeros = array(10, 20, 30, 40, 50);
+$suma = array_sum($numeros);
+$cantidad = count($numeros);
+$promedio = $suma / $cantidad;
+echo "El promedio es: " . $promedio;
+//quinta act
+$numeros = array(50, 20, 10, 40, 30);
+sort($numeros);
+foreach ($numeros as $numero) {
+    echo $numero . "<br>";
+}
 ?>
